@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Malla Curricular</title>
+  <style>
+    body { font-family: Arial; padding: 20px; background-color: #f9f9f9; }
+    .semestre { margin-bottom: 30px; }
+    .titulo { font-size: 20px; font-weight: bold; margin-bottom: 10px; }
+    .ramo { background: #e0f7fa; border: 1px solid #0097a7; padding: 10px; margin: 5px 0; cursor: pointer; border-radius: 5px; }
+    .descripcion { display: none; font-size: 14px; margin-top: 5px; }
+  </style>
+</head>
+<body>
+  <h1>Malla Curricular – Educación (Ejemplo)</h1>
+
+  <div class="semestre">
+    <div class="titulo">1er Semestre</div>
+    <div class="ramo" onclick="toggle(this)">Psicología General
+      <div class="descripcion">Estudia los fundamentos del comportamiento humano.</div>
+    </div>
+    <div class="ramo" onclick="toggle(this)">Pedagogía Inicial
+      <div class="descripcion">Introducción a la enseñanza y el rol docente.</div>
+    </div>
+  </div>
+
+  <div class="semestre">
+    <div class="titulo">2do Semestre</div>
+    <div class="ramo" onclick="toggle(this)">Desarrollo Cognitivo
+      <div class="descripcion">Procesos mentales en la infancia y adolescencia.</div>
+    </div>
+    <div class="ramo" onclick="toggle(this)">Currículum y Evaluación
+      <div class="descripcion">Planificación curricular y tipos de evaluación.</div>
+    </div>
+  </div>
+
+  <script>
+    function toggle(elem) {
+      let desc = elem.querySelector('.descripcion');
+      desc.style.display = desc.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>
